@@ -45,7 +45,7 @@ export default class Mapping extends Component {
     if (this.props.partner.hasOwnProperty(this.props.release_id)) {
       cls += ' in';
     }
-    const ident = this.props.release_id.replace(/\./g, '-');
+    const ident = this.props.release_id.replace(/[.@]/g, '-');
     return (
       <div className="panel panel-default">
           <div className="panel-heading" data-toggle="collapse" data-target={'#' + ident}>
